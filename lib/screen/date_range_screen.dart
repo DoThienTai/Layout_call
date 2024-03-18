@@ -44,9 +44,10 @@ class _DateRangeState extends State<DateRange> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      body: SafeArea(
+      body: Container(
+        margin: EdgeInsets.only(top: 32.h),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Container(
               width: double.maxFinite,

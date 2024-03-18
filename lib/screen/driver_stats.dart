@@ -16,8 +16,9 @@ class DriverStats extends StatelessWidget {
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        body: SafeArea(
-          child: SingleChildScrollView(
+        body: SingleChildScrollView(
+          child: Container(
+            margin: EdgeInsets.only(top: 32.h),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [

@@ -50,7 +50,8 @@ class _OnCallScreenState extends State<OnCallScreen> {
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        body: SafeArea(
+        body: Container(
+          margin: EdgeInsets.only(top: 32.h),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
