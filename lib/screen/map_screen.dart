@@ -267,53 +267,48 @@ class _MapScreenState extends State<MapScreen> {
             Container(
               height: 54.h,
               margin: EdgeInsets.only(right: 62.w,left: 58.w),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                        width: 91.w,
-                        height: 32.h,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Container(
-                              height: 32.h,
-                              width: 32.w,
-                              child: Image.asset("assets/image/MapView1.png",),
-                            ),
-                            Text("Tasks",
-                                style: TextStyle(color: Color(0xFFffffff),
-                                  fontSize: 18.sp,
-                                  letterSpacing: 1,
-                                  fontFamily: 'Roboto-Regular',
-                                ))
-                          ],
+                  Container(
+                    width: 91.w,
+                    height: 32.h,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          height: 32.h,
+                          width: 32.w,
+                          child: Image.asset("assets/image/MapView1.png",),
                         ),
-                      ),
-                      Container(
-                        width: 91.w,
-                        height: 32.h,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Container(
-                              height: 22.h,
-                              width: 22.w,
-                              child: Image.asset("assets/image/chats.png",),
-                            ),
-                            Text("Chats",
-                                style: TextStyle(color: Color(0xFF9B9B9B),
-                                  fontSize: 18.sp,
-                                  letterSpacing: 1,
-                                  fontFamily: 'Roboto-Regular',
-                                ))
-                          ],
+                        Text("Tasks",
+                            style: TextStyle(color: Color(0xFFffffff),
+                              fontSize: 18.sp,
+                              letterSpacing: 1,
+                              fontFamily: 'Roboto-Regular',
+                            ))
+                      ],
+                    ),
+                  ),
+                  Container(
+                    width: 91.w,
+                    height: 32.h,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          height: 22.h,
+                          width: 22.w,
+                          child: Image.asset("assets/image/chats.png",),
                         ),
-                      ),
-                    ],
+                        Text("Chats",
+                            style: TextStyle(color: Color(0xFF9B9B9B),
+                              fontSize: 18.sp,
+                              letterSpacing: 1,
+                              fontFamily: 'Roboto-Regular',
+                            ))
+                      ],
+                    ),
                   ),
                 ],
               ),

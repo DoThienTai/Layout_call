@@ -23,11 +23,11 @@ class DriverStats extends StatelessWidget {
               children: [
                 //Status bar
                 Container(
-                  height: 17.h,
-                  margin: EdgeInsets.only(bottom: 25.h, left: 30.w, right: 10.w),
+                  height: 44.h,
+                  margin: EdgeInsets.only(left: 30.w, right: 10.w),
                   width: double.infinity,
                   child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
@@ -44,8 +44,8 @@ class DriverStats extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Container(
-                                height: 14.w,
-                                width: 20.h,
+                                height: 14.h,
+                                width: 20.w,
                                 margin: EdgeInsets.only(right: 2.w),
                                 child: Image.asset("assets/image/icon_network.png", fit: BoxFit.fill,),
                               ),
@@ -223,68 +223,66 @@ class DriverStats extends StatelessWidget {
                         width: double.infinity,
                         child: SizedBox(),
                       ),
-                      Expanded(
-                        child: Container(
-                          padding: EdgeInsets.symmetric(horizontal: 20.w,vertical: 20.h),
-                          child:  Column(
-                            children: [
-                              Row(
-                                children: [
-                                  StatisticItemWidget(img:"assets/image/icon_bag.png", text: "Total Drops", value: "15"),
-                                  SizedBox(width: 10.w,),
-                                  StatisticItemWidget(img:"assets/image/Moving.png", text: "Traveled", value: "05.27 mi"),
-                                ],
-                              ),
-                              SizedBox(height: 10.h,),
-                              Row(
-                                children: [
-                                  StatisticItemWidget(img:"assets/image/Moving.png", text: "Moving", value: "03:40:25"),
-                                  SizedBox(width: 10.w,),
-                                  StatisticItemWidget(img:"assets/image/Stop.png", text: "Stopped", value: "00:35:43"),
-                                ],
-                              ),
-                              SizedBox(height: 10.h,),
-                              Row(
-                                children: [
-                                  StatisticItemWidget(img:"assets/image/timer.png", text: "On Duty", value: "04:01:37"),
-                                  SizedBox(width: 10.w,),
-                                  StatisticItemWidget(img:"assets/image/timer-pause.png", text: "Idled", value: "00:09:23"),
-                                ],
-                              ),
-                              SizedBox(height: 10.h,),
-                              Row(
-                                children: [
-                                  StatisticItemWidget(img:"assets/image/SuccessRate.png", text: "Success Rate", value: "90%"),
-                                  SizedBox(width: 10.w,),
-                                  StatisticItemWidget(img:"assets/image/FailureRate.png", text: "Failure Rate", value: "2%  "),
-                                ],
-                              ),
-                              SizedBox(height: 10.h,),
-                              Row(
-                                children: [
-                                  StatisticItemWidget(img:"assets/image/Products.png", text: "Successful Drops", value: "12"),
-                                  SizedBox(width: 10.w,),
-                                  StatisticItemWidget(img:"assets/image/Products1.png", text: "Failed Drops", value: "3"),
-                                ],
-                              ),
-                              SizedBox(height: 10.h,),
-                              Row(
-                                children: [
-                                  StatisticItemWidget(img:"assets/image/Tasks.png", text: "Average Time to Complete", value: "6.43 min"),
-                                  SizedBox(width: 10.w,),
-                                  StatisticItemWidget(img:"assets/image/store.png", text: "Average Time spent at the Hub", value: "13.08 min"),
-                                ],
-                              ),
-                              SizedBox(height: 10.h,),
-                              Row(
-                                children: [
-                                  StatisticItemWidget(img:"assets/image/Tasks.png", text: "On time Order Rate", value: "91%"),
-                                  SizedBox(width: 10.w,),
-                                  StatisticItemWidget(img:"assets/image/Tasks2.png", text: "Delayed Order Rate", value: "13%"),
-                                ],
-                              ),
-                            ],
-                          ),
+                      Container(
+                        padding: EdgeInsets.symmetric(horizontal: 20.w,vertical: 20.h),
+                        child:  Column(
+                          children: [
+                            Row(
+                              children: [
+                                StatisticItemWidget(img:"assets/image/icon_bag.png", text: "Total Drops", value: "15"),
+                                SizedBox(width: 10.w,),
+                                StatisticItemWidget(img:"assets/image/Moving.png", text: "Traveled", value: "05.27 mi"),
+                              ],
+                            ),
+                            SizedBox(height: 10.h,),
+                            Row(
+                              children: [
+                                StatisticItemWidget(img:"assets/image/Moving.png", text: "Moving", value: "03:40:25"),
+                                SizedBox(width: 10.w,),
+                                StatisticItemWidget(img:"assets/image/Stop.png", text: "Stopped", value: "00:35:43"),
+                              ],
+                            ),
+                            SizedBox(height: 10.h,),
+                            Row(
+                              children: [
+                                StatisticItemWidget(img:"assets/image/timer.png", text: "On Duty", value: "04:01:37"),
+                                SizedBox(width: 10.w,),
+                                StatisticItemWidget(img:"assets/image/timer-pause.png", text: "Idled", value: "00:09:23"),
+                              ],
+                            ),
+                            SizedBox(height: 10.h,),
+                            Row(
+                              children: [
+                                StatisticItemWidget(img:"assets/image/SuccessRate.png", text: "Success Rate", value: "90%"),
+                                SizedBox(width: 10.w,),
+                                StatisticItemWidget(img:"assets/image/FailureRate.png", text: "Failure Rate", value: "2%  "),
+                              ],
+                            ),
+                            SizedBox(height: 10.h,),
+                            Row(
+                              children: [
+                                StatisticItemWidget(img:"assets/image/Products.png", text: "Successful Drops", value: "12"),
+                                SizedBox(width: 10.w,),
+                                StatisticItemWidget(img:"assets/image/Products1.png", text: "Failed Drops", value: "3"),
+                              ],
+                            ),
+                            SizedBox(height: 10.h,),
+                            Row(
+                              children: [
+                                StatisticItemWidget(img:"assets/image/Tasks.png", text: "Average Time to Complete", value: "6.43 min"),
+                                SizedBox(width: 10.w,),
+                                StatisticItemWidget(img:"assets/image/store.png", text: "Average Time spent at the Hub", value: "13.08 min"),
+                              ],
+                            ),
+                            SizedBox(height: 10.h,),
+                            Row(
+                              children: [
+                                StatisticItemWidget(img:"assets/image/Tasks.png", text: "On time Order Rate", value: "91%"),
+                                SizedBox(width: 10.w,),
+                                StatisticItemWidget(img:"assets/image/Tasks2.png", text: "Delayed Order Rate", value: "13%"),
+                              ],
+                            ),
+                          ],
                         ),
                       )
                     ],

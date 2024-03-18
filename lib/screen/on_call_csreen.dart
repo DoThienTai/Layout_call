@@ -128,6 +128,7 @@ class _OnCallScreenState extends State<OnCallScreen> {
                 width: 139.w,
                 height: 40.h,
                 margin: EdgeInsets.only(bottom: 8.h, left: 139.w),
+                alignment: Alignment.center,
                 child: Text(
                   'Jessica',
                   style: TextStyle(
@@ -136,7 +137,6 @@ class _OnCallScreenState extends State<OnCallScreen> {
                     letterSpacing: 1.3,
                     fontFamily: 'Roboto-Bold',
                   ),
-                  textAlign: TextAlign.center,
                 ),
               ),
               Container(

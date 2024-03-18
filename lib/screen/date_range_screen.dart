@@ -126,6 +126,7 @@ class _DateRangeState extends State<DateRange> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text("Date range",
+                                textAlign: TextAlign.center,
                                 style: TextStyle(color: Color(0xFFffffff),
                                 fontSize: 20.sp,
                                 letterSpacing: 1.3,
@@ -133,6 +134,7 @@ class _DateRangeState extends State<DateRange> {
                               )),
                               SizedBox(height: 4.h,),
                               Text("Jun 08, 2020 - Jun 11, 2022",
+                                textAlign: TextAlign.center,
                                 style: TextStyle(color: Color(0xFFffffff),
                                   fontSize: 16.sp,
                                   letterSpacing: 1,
