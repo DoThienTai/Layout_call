@@ -12,7 +12,7 @@ class _PinkPassportState extends State<PinkPassport> {
   final List<Map<String, dynamic>> data = [
     {
       'image':'assets/image/tutoria1.png',
-      'text': 'Please turn on the screen recording function',
+      'text': 'Please turn on the screen recording function.',
     },
     {
       'image':'assets/image/tutorial2.png',
@@ -259,8 +259,8 @@ class _PinkPassportState extends State<PinkPassport> {
                                             child: Image.asset(data[index]['image'],),
                                           ),
                                           Container(
+                                            width: 327.w,
                                             margin: EdgeInsets.symmetric(horizontal: 5.w,vertical:16.h ),
-                                            height: 115.h,
                                             decoration: BoxDecoration(
                                               borderRadius: BorderRadius.all(Radius.circular(10.h)),
                                               color: Color(0xFFF3F3F3),
@@ -270,15 +270,19 @@ class _PinkPassportState extends State<PinkPassport> {
                                                 SizedBox(width: 12.w,),
                                                 Icon(Icons.check_outlined, color: Colors.black, size: 24),
                                                 SizedBox(width: 12.w,),
-                                                Container(
-                                                  width: 269.w,
-                                                  child: Text(data[index]['text'],
-                                                    softWrap: true,
-                                                    overflow: TextOverflow.visible,
-                                                    style: TextStyle(
-                                                      fontFamily: 'Roboto-Regular',
-                                                      fontSize: 16.sp,
-                                                      height: 1.1.h,
+                                                Flexible(
+                                                  child: Container(
+                                                    width: 269.w,
+                                                    margin: EdgeInsets.symmetric(vertical:5.h ),
+                                                    child: Text(data[index]['text'],
+                                                      softWrap: true,
+                                                      overflow: TextOverflow.visible,
+                                                      style: TextStyle(
+                                                        fontFamily: 'Roboto-Regular',
+                                                        fontSize: 16.sp,
+                                                        height: 1.2.h,
+                                                        letterSpacing: 0.5
+                                                      ),
                                                     ),
                                                   ),
                                                 )
