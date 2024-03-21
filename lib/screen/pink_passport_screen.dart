@@ -93,7 +93,7 @@ class _PinkPassportState extends State<PinkPassport> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      width: 35.w,
+                      width: 40.w,
                       child: Text(
                         "12:00",
                         style: TextStyle(color: Colors.black),
@@ -176,6 +176,7 @@ class _PinkPassportState extends State<PinkPassport> {
                          Container(
                            height: 93.h,
                            padding: EdgeInsets.symmetric(vertical: 20.h,horizontal: 24.w),
+                           margin: EdgeInsets.only(top: 16.h, bottom: 30.h),
                            decoration: BoxDecoration(
                              borderRadius: BorderRadius.all(Radius.circular(10.h)),
                              gradient: LinearGradient(
@@ -222,14 +223,13 @@ class _PinkPassportState extends State<PinkPassport> {
                          ),
                          //slider
                          Container(
-                           height: 573.h,
+                           height: 527.h,
                            child: Column(
                              children: [
                                //title
                                Container(
                                  height: 27.h,
                                  width: double.maxFinite,
-                                 margin: EdgeInsets.only(top: 30.h),
                                  child: Text(
                                    'Pink Passport Application Guide',
                                    style: TextStyle(
@@ -255,14 +255,14 @@ class _PinkPassportState extends State<PinkPassport> {
                                       return Column(
                                         children: [
                                           Container(
-                                            height: 323,
+                                            height: 323.h,
                                             child: Image.asset(data[index]['image'],),
                                           ),
                                           Container(
-                                            margin: EdgeInsets.only(top: 16.h,bottom: 16.h),
-                                            height: 100.h,
+                                            margin: EdgeInsets.symmetric(horizontal: 5.w,vertical:16.h ),
+                                            height: 115.h,
                                             decoration: BoxDecoration(
-                                              borderRadius: BorderRadius.all(Radius.circular(8.h)),
+                                              borderRadius: BorderRadius.all(Radius.circular(10.h)),
                                               color: Color(0xFFF3F3F3),
                                             ),
                                             child: Row(
@@ -292,7 +292,7 @@ class _PinkPassportState extends State<PinkPassport> {
                                ),
                                //pagination
                                Container(
-                                 margin: EdgeInsets.only(bottom: 20.h),
+                                 margin: EdgeInsets.only(bottom: 9.h),
                                  child: Row(
                                    mainAxisAlignment: MainAxisAlignment.center,
                                    children: List.generate(data.length, (index) => _buildDot(index),),
@@ -310,7 +310,7 @@ class _PinkPassportState extends State<PinkPassport> {
                                color: Colors.black
                              ),
                              width: double.infinity,
-                             height: 48,
+                             height: 48.h,
                              margin: EdgeInsets.only( bottom:16.h ),
                              child:  Center(
                                child: Text(
