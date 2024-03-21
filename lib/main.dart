@@ -5,6 +5,7 @@ import 'package:layout_call/screen/driver_stats.dart';
 import 'package:layout_call/screen/map_screen.dart';
 import 'package:layout_call/screen/on_call_csreen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:layout_call/screen/pink_passport_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,17 +22,18 @@ class MyApp extends StatelessWidget {
         builder: (_,child){
           return MaterialApp(
               debugShowCheckedModeBanner: false,
-              //home: MapScreen(),
-              initialRoute: '/',
-              routes: {
-                // When navigating to the "/" route, build the HomeScreen widget.
-                '/': (context) => StartCall(),
-                // When navigating to the "/second" route, build the SecondScreen widget.
-                '/onCallScreen': (context) => OnCallScreen(),
-                '/driverScreen': (context) => DriverStats(),
-                '/dateRange': (context) => DateRange(),
-                '/mapScreen': (context) => MapScreen(),
-              }
+              home: PinkPassport(),
+              // initialRoute: '/',
+              // routes: {
+              //   // When navigating to the "/" route, build the HomeScreen widget.
+              //   '/': (context) => StartCall(),
+              //   // When navigating to the "/second" route, build the SecondScreen widget.
+              //   '/onCallScreen': (context) => OnCallScreen(),
+              //   '/driverScreen': (context) => DriverStats(),
+              //   '/dateRange': (context) => DateRange(),
+              //   '/mapScreen': (context) => MapScreen(),
+              //   '/pinkPassport': (context) => PinkPassport(),
+              // }
           );
         }
     );

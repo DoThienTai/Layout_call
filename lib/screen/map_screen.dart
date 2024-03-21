@@ -291,24 +291,29 @@ class _MapScreenState extends State<MapScreen> {
                       ],
                     ),
                   ),
-                  Container(
-                    width: 91.w,
-                    height: 32.h,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          height: 22.h,
-                          width: 22.w,
-                          child: Image.asset("assets/image/chats.png",),
-                        ),
-                        Text("Chats",
-                            style: TextStyle(color: Color(0xFF9B9B9B),
-                              fontSize: 18.sp,
-                              letterSpacing: 1,
-                              fontFamily: 'Roboto-Regular',
-                            ))
-                      ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/pinkPassport');
+                    },
+                    child: Container(
+                      width: 91.w,
+                      height: 32.h,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            height: 22.h,
+                            width: 22.w,
+                            child: Image.asset("assets/image/chats.png",),
+                          ),
+                          Text("Chats",
+                              style: TextStyle(color: Color(0xFF9B9B9B),
+                                fontSize: 18.sp,
+                                letterSpacing: 1,
+                                fontFamily: 'Roboto-Regular',
+                              ))
+                        ],
+                      ),
                     ),
                   ),
                 ],

@@ -32,14 +32,24 @@ class _DateRangeState extends State<DateRange> {
     });
   }
 
-  void  _toggedSelected (int index){
-    setState(() {
-      _clickCountList[index]++;
-      if (_clickCountList[index] == 3) {
-        _clickCountList[index] = 0;
+  List<int> selectedIndexes = [];
+
+  Color _calculateBackgroundColor(int index) {
+    if (selectedIndexes.isEmpty) {
+      return Colors.black;
+    } else if (selectedIndexes.length == 1) {
+      return selectedIndexes.contains(index) ? Colors.black : Colors.black;
+    }else {
+      if (index == selectedIndexes.first || index == selectedIndexes.last) {
+        return Colors.blue;
+      } else if (index > selectedIndexes.first && index < selectedIndexes.last) {
+        return Color(0xFF373C5C); // Change to desired color
+      } else {
+        return Colors.black;
       }
-    });
+    }
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -207,17 +217,35 @@ class _DateRangeState extends State<DateRange> {
                                 ),
                                 itemCount: numberCalendar.length,
                                 itemBuilder: ( BuildContext context, int index) {
-                                  bool isBorderVisible = _clickCountList[index] == 1;
-                                  bool isBackgroundColorVisible = _clickCountList[index] == 2;
                                   return GestureDetector(
-                                    onTap: () => _toggedSelected(index),
+                                    onTap: (){
+                                       setState(() {
+                                         if (selectedIndexes.isEmpty || selectedIndexes.length == 2) {
+                                           selectedIndexes.clear();
+                                           selectedIndexes.add(index);
+                                         } else if (selectedIndexes.length == 1 && selectedIndexes.contains(index)) {
+                                           selectedIndexes.add(index);
+                                         } else {
+                                           if (selectedIndexes.contains(index)) {
+                                             selectedIndexes.remove(index);
+                                           } else {
+                                             selectedIndexes.add(index);
+                                             selectedIndexes.sort();
+                                           }
+                                         }
+                                       });
+                                    },
+                                    //_toggedSelected(index)
                                     child: Container(
                                       width: 48.w,
                                       height: 48.h,
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.all(Radius.circular(4.h)),
-                                        border:  isBorderVisible ? Border.all(color: Colors.blueAccent, width: 1) : null,
-                                        color:  isBackgroundColorVisible ? Colors.blue : null,
+                                        //Color(0xFF373C5C)
+                                        border: Border.all(
+                                          color: selectedIndexes.contains(index) ? Colors.blue : Colors.black,
+                                        ),
+                                        color: _calculateBackgroundColor(index),
                                       ),
                                       child: Center(child: Customday(day: numberCalendar[index])),
                                     ),
@@ -240,7 +268,8 @@ class _DateRangeState extends State<DateRange> {
                   Container(
                     height: 52.h,
                     child: InkWell(
-                      onTap: () {},
+                      onTap: () {
+                      },
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(100.h),
